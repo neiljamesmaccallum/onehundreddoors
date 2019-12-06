@@ -55,5 +55,7 @@ public class TestHundredDoorsCalculator {
 			assertFalse(hundredDoors.getDoors().get(2 * i - 1).isOpen());
 		}
 	}
+	
+
 
 }
