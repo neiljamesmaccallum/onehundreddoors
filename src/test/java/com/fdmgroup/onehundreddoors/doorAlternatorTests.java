@@ -11,14 +11,14 @@ public class doorAlternatorTests {
 	@Test
 	void test_AlternateDoorOpensAClosedDoor(){
 		Door door = new Door(false);
-		OnehundredDoorsApp.alternateDoor(door);
+		HundredDoorsCalculator.alternateDoor(door);
 		assertTrue(door.isOpen());
 	}
 	
 	@Test
 	void test_AlternateDoorClosesAnOpenDoor() {
 		Door door = new Door(true);
-		OnehundredDoorsApp.alternateDoor(door);
+		HundredDoorsCalculator.alternateDoor(door);
 		assertFalse(door.isOpen());
 	}
 
@@ -26,8 +26,8 @@ public class doorAlternatorTests {
 	void test_AlternateDoorProducesTheInitialResultWhenIncurredTwice() {
 		boolean isOpenInitially = false;
 		Door door = new Door(isOpenInitially);
-		OnehundredDoorsApp.alternateDoor(door);
-		OnehundredDoorsApp.alternateDoor(door);
+		HundredDoorsCalculator.alternateDoor(door);
+		HundredDoorsCalculator.alternateDoor(door);
 		assertEquals(isOpenInitially, door.isOpen());
 	}
 }

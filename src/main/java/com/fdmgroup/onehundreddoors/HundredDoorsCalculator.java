@@ -4,7 +4,7 @@ public class HundredDoorsCalculator {
 
 	public static void openCloseDoorsIteration(int iteration, HundredDoors hundredDoors) {
 		for (int i =1;iteration*i<=100;i++) {
-			OnehundredDoorsApp.alternateDoor(hundredDoors.getDoors().get(iteration*i-1));
+			alternateDoor(hundredDoors.getDoors().get(iteration*i-1));
 		}
 	}
 
@@ -13,5 +13,14 @@ public class HundredDoorsCalculator {
 			openCloseDoorsIteration(i, hundredDoors);
 		}
 	}
+	
+	public static void alternateDoor(Door door) {
+		if (door.isOpen()) {
+			door.setOpen(false);
+		} else {
+			door.setOpen(true);
+		}
+	}
+
 
 }
